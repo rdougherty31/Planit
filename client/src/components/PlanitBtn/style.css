@@ -1,0 +1,13 @@
+/* planit btn style */
+#planitBtn {
+    width: 8rem;
+    box-shadow: none;
+    text-shadow: none;
+    border: 2px dashed #fe5;
+    background: #ff4443;
+    color: #fe5;
+    font-size: 1.5rem;
+}
+#planitBtn div {
+    display: inline-block;
+}
