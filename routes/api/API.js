@@ -1,4 +1,5 @@
 const db = require("../../models");
+const axios = require("axios");
 
 module.exports = function (app) {
   // GET routes
@@ -13,6 +14,9 @@ module.exports = function (app) {
     db.User.findAll({}).then(function (dbUser) {
       res.json(dbUser);
     });
+  });
+  app.get("/testAPI", function(req, res) {
+    axios.get("https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC").then(response=>res.json(response)).catch(err=>console.log(err));
   });
   // -------------------------------------------
   // POST routes

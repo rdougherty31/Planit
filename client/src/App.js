@@ -8,6 +8,8 @@ import NoMatch from "./pages/nomatch";
 import Feed from "./pages/feed";
 import Landing from "./pages/landing";
 import Profile from "./pages/profile";
+import MyTrips from "./pages/mytrips";
+import CreateTrip from "./pages/create";
 
 export default function App() {
   return (
@@ -19,7 +21,9 @@ export default function App() {
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/profile" component={Profile} />
           {/* <Route exact path="/profile/:id" component={} /> */}
-        {/* <Route component={NoMatch} /> */}
+        <Route exact path="/mytrips" component={MyTrips} />
+        <Route exact path="/createtrip" component={CreateTrip} />
+        <Route component={NoMatch} />
       </Switch>
     </Router>
   );

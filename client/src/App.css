@@ -56,3 +56,13 @@ html {
   margin:1rem;
   padding:1rem;
 }
+.generalBtn {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  padding: .5rem;
+  color: #575555;
+}
+.generalBtn:focus {
+  outline: 0;
+}

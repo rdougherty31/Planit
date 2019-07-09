@@ -1,12 +1,10 @@
 // profile page
 import React from "react";
 
-function Profile() {
+export default function Profile() {
     return (
         <div>
             this is a profile
         </div>
     );
 }
-
-export default Profile;
