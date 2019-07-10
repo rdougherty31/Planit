@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import './style.css';
 import PlanitBtn from "../PlanitBtn";
+import NextTripBtn from "../NextTripBtn";
 import DeleteBtn from "../DeleteBtn";
 import API from "../../utils/API";
 
@@ -35,7 +36,7 @@ class Post extends Component {
                     <div className="postFriends">Friends: {this.state.people}</div>
                     <div className="postDates">Dates: {this.state.startMonth}/{this.state.startDay} - {this.state.endMonth}/{this.state.endDay}</div>
                     <PlanitBtn />
-                    <button className="nextTripBtn" onClick={this.nextTrip}>Next Trip</button>
+                    <NextTripBtn onClick={this.nextTrip} />
                 </div>
             </div>
         );

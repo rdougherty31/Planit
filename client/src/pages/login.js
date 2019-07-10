@@ -4,6 +4,7 @@ import SignInBtn from "../components/SigninBtn";
 import Footer from "../components/Footer";
 // import db from "../../../models/index";
 // import User from "../../../models/user";
+import API from "../utils/API";
 
 class Login extends Component {
     state = {
@@ -31,6 +32,7 @@ class Login extends Component {
         //         console.log("Username: "+this.state.username+" Password: "+this.state.password);
         //     }
         // });
+        API.test().then(response=>response.json(response)).catch(err=>console.log(err));
         console.log("Login form");
     };
     render() {
@@ -39,7 +41,7 @@ class Login extends Component {
                 <form id="signinForm">
                     <input id="signinUName" name="username" placeholder="Username" />
                     <input id="signinPword" name="password" placeholder="Password" />
-                    <SignInBtn />
+                    <SignInBtn onClick={this.handleFormSubmit}/>
                 </form>
                 <Footer />
             </div>

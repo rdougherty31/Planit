@@ -15,6 +15,9 @@
     width: 20rem;
     height: 2rem;
     text-align: center;
+    border-radius: .25rem;
+    border: 1px solid #ddb6a5;
+    font-family: poppins;
   }
   #signinForm, #signupForm {
       margin-top: 15%;
@@ -25,10 +28,9 @@
   #landingWrapper a {
       text-decoration: none;
   }
-  .interests, #otherInterests input {
-    display: inline;
-}
-#otherInterests {
-    width: 10%;
-    margin: 0 auto;
+#signinBtn, #signupBtn {
+    background: radial-gradient(#eba, #ffd4c6);
+    color: white;
+    font-family: poppins;
+    letter-spacing: .15rem;
 }
