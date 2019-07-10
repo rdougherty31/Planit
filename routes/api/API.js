@@ -16,7 +16,12 @@ module.exports = function (app) {
     });
   });
   app.get("/testAPI", function(req, res) {
-    axios.get("https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC").then(response=>res.json(response)).catch(err=>console.log(err));
+  axios.get("https://api.giphy.com/v1/gifs/search?q=kittens&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=20")
+  .then(response=>{
+    console.log(response.data.data)
+    res.send(response.data.data)
+  })
+  .catch(err=>console.log(err));
   });
   // -------------------------------------------
   // POST routes
@@ -34,3 +39,24 @@ module.exports = function (app) {
   //   console.log("api user test");
   // });
 }
+
+
+
+//---------------------------------------------------------------
+
+// const router = require("express").Router();
+// const postController = require("../../controllers/postController");
+
+//   // GET routes
+//   router.route("/testcontroller")
+//   .get(postController.findAll)
+//   .post(postController.create);
+
+// // Matches with "/api/books/:id"
+// router
+//   .route("/:id")
+//   .get(postController.findById)
+//   .put(postController.update)
+//   .delete(postController.remove);
+
+// module.exports = router;

@@ -11,3 +11,7 @@
 #planitBtn div {
     display: inline-block;
 }
+#planitBtn:hover {
+    border:none;
+    padding: .5rem;
+}

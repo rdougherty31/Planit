@@ -6,8 +6,9 @@ const PORT = process.env.PORT || 8080;
 const Sequelize = require("sequelize");
 const router = express.Router();
 const apiRoutes = require("./routes/api/API");
+const cors = require("cors");
 
-app.use(bodyParser.urlencoded({ extended: true}));
+
 app.use(bodyParser.json());
 
 // Define middleware here
@@ -20,6 +21,8 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use("/api/trips/", routes);
 app.use("/test", routes);
+// app.use("/api/posts",routes);
+// app.use("/api/users",routes);
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -35,6 +38,8 @@ require("./routes/api/API.js")(app);
 require("./routes/html/HTML.js")(app);
 
 app.use("/api",apiRoutes);
+
+app.use(cors());
 
 // Sync sequelize models & Start the API server
 var syncOptions = { force: false };
