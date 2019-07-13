@@ -10,6 +10,7 @@ import Landing from "./pages/landing";
 import Profile from "./pages/profile";
 import MyTrips from "./pages/mytrips";
 import CreateTrip from "./pages/create";
+import Search from "./pages/search";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           {/* <Route exact path="/profile/:id" component={} /> */}
         <Route exact path="/mytrips" component={MyTrips} />
         <Route exact path="/createtrip" component={CreateTrip} />
+        <Route exact path="/searchtrips" component={Search} />
         <Route component={NoMatch} />
       </Switch>
     </Router>

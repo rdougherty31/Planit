@@ -9,7 +9,7 @@ import API from "../utils/API";
 class Login extends Component {
     state = {
         username: "",
-        password: ""
+        pword: ""
     };
     handleInputChange = event => {
         const name = event.target.name;

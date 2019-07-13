@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function SignUpBtn() {
+export default function SignUpBtn(props) {
     return (
-        <button id="signupBtn">Sign up</button>
+        <button id="signupBtn" {...props}>Sign up</button>
     );
 }

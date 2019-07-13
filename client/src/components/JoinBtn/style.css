@@ -1,0 +1,9 @@
+#joinBtn {
+    font-size: 5rem;
+    color: #50cc87;
+    padding: 1rem;
+    transition: font-size .5s;
+}
+#joinBtn:hover {
+    font-size: 10rem;
+}

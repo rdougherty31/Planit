@@ -5,6 +5,7 @@ import FeedBtn from "../FeedBtn";
 import MyTripsBtn from "../MyTripsBtn";
 import ProfileBtn from "../ProfileBtn";
 import CreateTripBtn from "../CreateTripBtn";
+import SearchTripsBtn from "../SearchTripsBtn";
 
 export default function Navbar() {
   return (
@@ -15,6 +16,7 @@ export default function Navbar() {
         <a href="/mytrips"><MyTripsBtn /></a>
         <a href="/profile"><ProfileBtn /></a>
         <a href="/createtrip"><CreateTripBtn /></a>
+        <a href="/searchtrips"><SearchTripsBtn /></a>
     </div>
   );
 }

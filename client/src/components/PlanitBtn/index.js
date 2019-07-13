@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function PlanitBtn() {
     return (
-        <button id="planitBtn"><div>Plan</div><div>it</div></button>
+        <button id="planitBtn"><div>Plan</div><div>It</div></button>
     );
 
 }

@@ -7,13 +7,13 @@ export default {
   },
   // Gets the book with the given id
   getUsers: function() {
-    return axios.get("http://localhost:8080/api/users");
+    return axios.get("/api/users");
   },
   getPosts: function() {
-    return axios.get("http://localhost:8080/api/posts");
+    return axios.get("/api/posts");
   },
-  createUser: function() {
-    return axios.post("http://localhost:8080/api/users");
+  createUser: function(newUser) {
+    return axios.post("/api/users", newUser);
   }
   // // Deletes the book with the given id
   // deleteBook: function(id) {

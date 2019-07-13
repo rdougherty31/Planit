@@ -17,34 +17,42 @@ module.exports = function(sequelize, DataTypes) {
       },
       outdoors: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       nature: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       histSites: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       food: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       museums: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       fineArts: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       music: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       festivals: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       },
       nightlife: {
@@ -53,6 +61,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       locals: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       }
     });

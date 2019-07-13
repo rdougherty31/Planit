@@ -2,12 +2,12 @@
     width: 8rem;
     box-shadow: none;
     text-shadow: none;
-    border: none;
-    background: #eba;
+    border: 5px solid #7dc2c2;
+    background: none;
     color: #fff;
     font-size: 1.5rem;
+    padding: .5rem;
 }
 #nextTripBtn:hover {
-    border:none;
-    padding: .5rem;
+    background: #7dc2c2;
 }

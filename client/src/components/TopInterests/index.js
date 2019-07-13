@@ -1,19 +1,45 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
 
-export default function TopInterests() {
-    return (
-        <select name="TopInterests" id="topInterests">
-            <option name="outdoors">Outdoor Adventures</option>
-            <option name="nature">Nature</option>
-            <option name="histSites">Historical Sites</option>
-            <option name="food">Local Food</option>
-            <option name="museums">Museums</option>
-            <option name="fineArts">Fine Arts</option>
-            <option name="music">Live Music</option>
-            <option name="festivals">Festivals</option>
-            <option name="nightlife">Night Life</option>
-            <option name="locals">Meeting Locals</option>
-        </select>
-    );
+class TopInterests extends Component {
+    state = {
+        outdoors: "",
+        nature: "",
+        histSites: "",
+        food: "",
+        museums: "",
+        fineArts: "",
+        music: "",
+        festivals: "",
+        nightlife: "",
+        locals: "",
+        anything: ""
+    };
+    handleInputChange = event => {
+        const name = event.target.name;
+        const value = event.target.value;
+        this.setState({
+            [name]: value
+        });
+        console.log(this.state);
+    }
+
+    render() {
+        return (
+            <select id="topInterests" name="interest" value={this.state.value}>
+                <option name="outdoors" value="outdoors">Outdoor Adventures</option>
+                <option name="nature" value="nature">Nature</option>
+                <option name="histSites" value="histSites">Historical Sites</option>
+                <option name="food" value="food">Local Food</option>
+                <option name="museums" value="museums">Museums</option>
+                <option name="fineArts" value="fineArts">Fine Arts</option>
+                <option name="music" value="music">Live Music</option>
+                <option name="festivals" value="festivals">Festivals</option>
+                <option name="nightlife" value="nightlife">Night Life</option>
+                <option name="locals" value="locals">Meeting Locals</option>
+                <option name="anything" value="anything">Up For Anything!</option>
+            </select>
+        );
+    }
 }
+export default TopInterests;

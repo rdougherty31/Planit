@@ -1,15 +1,16 @@
 /* style for header component */
 #plan, #it {
-    color: #BB0403;
+    color: #fa5d25;
     font-size: 5rem;
     text-shadow: 0 0 0.25rem white;
     display: inline-block;
     font-style: italic;
 }
-#it {
+#plan {
     font-weight: bold;
 }
 #header {
-    text-align: center;
-    margin-top: 11rem;
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }

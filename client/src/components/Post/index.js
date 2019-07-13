@@ -1,8 +1,8 @@
 // post component
 import React, { Component } from "react";
 import './style.css';
-import PlanitBtn from "../PlanitBtn";
-import NextTripBtn from "../NextTripBtn";
+// import PlanitBtn from "../PlanitBtn";
+import JoinBtn from "../JoinBtn";
 import DeleteBtn from "../DeleteBtn";
 import API from "../../utils/API";
 
@@ -31,12 +31,11 @@ class Post extends Component {
         return (
             <div className="postWrapper">
                 <div className="innerWrapper">
-                    <DeleteBtn />
                     <div className="postDest" >Destination: {this.state.city}, {this.state.country}</div>
                     <div className="postFriends">Friends: {this.state.people}</div>
                     <div className="postDates">Dates: {this.state.startMonth}/{this.state.startDay} - {this.state.endMonth}/{this.state.endDay}</div>
-                    <PlanitBtn />
-                    <NextTripBtn onClick={this.nextTrip} />
+                    <JoinBtn />
+                    <DeleteBtn onClick={this.nextTrip} />
                 </div>
             </div>
         );

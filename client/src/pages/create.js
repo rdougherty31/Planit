@@ -1,18 +1,16 @@
-// create trip page
-
-// componentDidMount() {
-//     this.loadBooks();
-// }
-
-
-
-// loadPosts() {
-//     get posts from database
-// }
 import React from "react";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import TripData from "../components/TripData";
+import TopInterests from "../components/TopInterests";
 
 export default function CreateTrip() {
     return (
-        <div>Create Trip Page</div>
+        <div>
+            <Header />
+            <Navbar />
+            <TripData />
+            <TopInterests />
+        </div>
     );
 }

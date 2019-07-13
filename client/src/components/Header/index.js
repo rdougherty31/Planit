@@ -5,8 +5,8 @@ import "./style.css";
 export default function Header() {
     return (
         <div id="header">
-            <div id="plan">****</div>
-            <div id="it">**</div>
+            <div id="plan">Plan</div>
+            <div id="it">It</div>
         </div>
     );
 }

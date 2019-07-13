@@ -1,14 +1,13 @@
 #mainContainer {
     width: 100%;
     background:none;
-    margin: 1rem auto;
+    margin: auto;
     border-radius: 2.5rem;
     margin-bottom: 3rem;
     padding: .5rem;
-    margin-top: -9rem;
     padding-left: 0;
   }
-  #signupUName, #signupPword, #signinUName, #signinPword, #signinBtn, #signupBtn {
+  #signupName, #signupUName, #signupPword, #signinUName, #signinPword, #signinBtn, #signupBtn {
     display: block;
     margin: 0 auto;
     margin-top: .5rem;
@@ -20,7 +19,7 @@
     font-family: poppins;
   }
   #signinForm, #signupForm {
-      margin-top: 15%;
+      margin-top: 10%;
   }
   #landingWrapper {
       margin-top: 15%;
@@ -29,8 +28,15 @@
       text-decoration: none;
   }
 #signinBtn, #signupBtn {
-    background: radial-gradient(#eba, #ffd4c6);
+    background: radial-gradient(#e79377, #ffd4c6);
     color: white;
     font-family: poppins;
     letter-spacing: .15rem;
+}
+.formLabel {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: poppins;
+    color: navy;
+    font-size: 1.5rem;
 }

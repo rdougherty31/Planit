@@ -15,13 +15,13 @@ module.exports = function (app) {
       res.json(dbUser);
     });
   });
-  app.get("/testAPI", function(req, res) {
-  axios.get("https://api.giphy.com/v1/gifs/search?q=kittens&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=20")
-  .then(response=>{
-    console.log(response.data.data)
-    res.send(response.data.data)
-  })
-  .catch(err=>console.log(err));
+  app.get("/testAPI", function (req, res) {
+    axios.get("https://api.giphy.com/v1/gifs/search?q=kittens&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=20")
+      .then(response => {
+        console.log(response.data.data)
+        res.send(response.data.data)
+      })
+      .catch(err => console.log(err));
   });
   // -------------------------------------------
   // POST routes
@@ -32,12 +32,13 @@ module.exports = function (app) {
   //   // });
   //   console.log("api post test");
   // });
-  // app.post("/api/users", function (req, res) {
-  //   // db.User.create(req.body).then(function (dbUser) {
-  //   //   res.json(dbUser);
-  //   // });
-  //   console.log("api user test");
-  // });
+  app.post("/api/users", function (req, res) {
+    console.log(req.body);
+    db.User.create(req.body).then(function (dbUser) {
+      res.json(dbUser);
+    });
+    //   console.log("api user test");
+  });
 }
 
 

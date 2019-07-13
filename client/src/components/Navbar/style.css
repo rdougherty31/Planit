@@ -5,7 +5,7 @@
     margin: .75rem 0;
     width: 15%;
     height: 15%;
-    margin-top: -5rem;
+    margin-top: -1rem;
 }
 #navbar a {
     padding: 1rem;
@@ -16,5 +16,5 @@
     text-align: center;
 }
 #navbar a:active, #navbar a:hover {
-    border: 1px solid #bb0303;
+    border: 2px dotted grey;
 }
