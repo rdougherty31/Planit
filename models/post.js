@@ -58,14 +58,14 @@ module.exports = function(sequelize, DataTypes) {
       },
       costMin: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           len: [1]
         }
       },
       costMax: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           len: [1]
         }
@@ -80,6 +80,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       planned: {
         type: DataTypes.BOOLEAN,
+        defaultValue: false,
         allowNull: false
       }
     });

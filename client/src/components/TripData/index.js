@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PlanitBtn from "../PlanitBtn";
 import "./style.css";
 
 class TripData extends Component {
@@ -25,8 +26,9 @@ class TripData extends Component {
     render() {
     return (
         <form className="tripData">
-            <input id="destCity" type="text" name="destCity" placeholder="Destination City" onChange={this.handleInputChange} />
-            <input id="destCountry" type="text" name="destCountry" placeholder="Destination Country" onChange={this.handleInputChange} />
+            <div id="createDest">Destination</div>
+            <input id="destCity" type="text" name="destCity" placeholder="City" onChange={this.handleInputChange} />
+            <input id="destCountry" type="text" name="destCountry" placeholder="Country" onChange={this.handleInputChange} />
             <div id="startDate">Start Date</div>
             <select id="startMonth" type="text" name="startMonth" onChange={this.handleInputChange} >
             <option name="jan" value="01">January</option>
@@ -137,6 +139,7 @@ class TripData extends Component {
             <option name="2022" value="22">2022</option>
             <option name="2023" value="23">2023</option>
             </select>
+            <PlanitBtn />
         </form>
     );
     }
