@@ -18,10 +18,10 @@ class SignUp extends Component {
         API.getPosts().then((res) => console.log(res));
     }
 
-    handleInputChange = event => {
+    handleInputChange = async event => {
         const name = event.target.name;
         const value = event.target.value;
-        this.setState({
+        await this.setState({
             [name]: value
         });
         console.log(this.state);
@@ -33,21 +33,23 @@ class SignUp extends Component {
         API.getUsers()
             .then(res => {
                 console.log(uNameExists);
-                console.log(res.data[0].username);
+                // console.log(res.data[0].username);
+                console.log(this.state.username);
                 for (var i = 0; i < res.data.length; i++) {
                     if (res.data[i].username === this.state.username) {
                         uNameExists = true;
                     }
                 }
                 uNameExists ? console.log("this username already exists") : console.log("create new user");
-                uNameExists ? alert("This username already exists. Please choose a different one.") : alert("Welcome, " + this.state.username + "!");
                 if (!uNameExists) {
+                    console.log(this.state)
                     API.createUser({
                         name: this.state.name,
                         username: this.state.username,
                         pword: this.state.password
                     }).then(response => console.log(this.state.username+" created")).catch(error => console.log(error));
                 }
+                uNameExists ? alert("This username already exists. Please choose a different one.") : alert("Welcome, " + this.state.username + "!");
             })
             .catch(err => console.log(err));
     };

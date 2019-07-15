@@ -49,14 +49,14 @@ module.exports = function (app) {
       })
       .catch(err => console.log(err));
   });
-  app.post("/api/users/", function (req, res) {
-    console.log(req);
-    db.Post.findOne({ id: req.body })
-      .then(function (post) {
-        console.log(post);
-      })
-      .catch(err => console.log(err));
-  });
+  // app.post("/api/users/", function (req, res) {
+  //   console.log(req);
+  //   db.Post.findOne({ id: req.body })
+  //     .then(function (post) {
+  //       console.log(post);
+  //     })
+  //     .catch(err => console.log(err));
+  // });
   // -------------------------------------------
   // POST routes
   // -------------------------------------------
