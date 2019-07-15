@@ -58,14 +58,3 @@ db.sequelize.sync(syncOptions).then(function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
     });
 });
-
-
-// const axios = require("axios");
-// const router = require("express").Router();
-
-// router.get("/flights/", (req, res) => {
-//     axios
-//       .get("https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy", { params: req.query })
-//       .then(({ data: { results } }) => res.json(results))
-//       .catch(err => res.status(422).json(err));
-//   });

@@ -42,7 +42,6 @@ class SignUp extends Component {
                 uNameExists ? console.log("this username already exists") : console.log("create new user");
                 uNameExists ? alert("This username already exists. Please choose a different one.") : alert("Welcome, " + this.state.username + "!");
                 if (!uNameExists) {
-                    console.log("Hi");
                     API.createUser({
                         name: this.state.name,
                         username: this.state.username,
@@ -51,18 +50,6 @@ class SignUp extends Component {
                 }
             })
             .catch(err => console.log(err));
-        // db.Users.findOne({username:this.state.username}).then(name=>{
-        //     if(name === 0) {
-        //         db.User.create({username: this.state.username, password: this.state.password});
-        //         console.log("Username: "+this.state.username+" Password: "+this.state.password);
-        //     } else {
-        //         this.setState({username:"", password:""});
-        //         // alert("This username is already taken. Please choose a different one.");
-        //         console.log("Username: "+this.state.username+" Password: "+this.state.password);
-        //         //res.JSON({Error: "This username is already taken"});
-        //     }
-        // });
-        // console.log("New user created");
     };
 
     render() {
@@ -72,12 +59,6 @@ class SignUp extends Component {
                 <input id="signupName" type="text" name="name" placeholder="Name" onChange={this.handleInputChange} />
                     <input id="signupUName" type="text" name="username" placeholder="Username" onChange={this.handleInputChange} />
                     <input id="signupPword" type="text" name="password" placeholder="Password" onChange={this.handleInputChange} />
-                    {/* <div className="formLabel">Select your Top 3 Travel Interests</div>
-                    <TopInterests name="interest1" onChange={this.interestSelected}/>
-                    <TopInterests name="interest2" onChange={this.interestSelected}/>
-                    <TopInterests name="interest3" onChange={this.interestSelected}/>
-                    <div className="formLabel">Select any additional interests</div>
-                    <OtherInterests /> */}
                     <SignUpBtn onClick={this.handleFormSubmit} />
                 </form>
             </div>

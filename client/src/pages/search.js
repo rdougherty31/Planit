@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import TripData from "../components/TripData";
 import TopInterests from "../components/TopInterests";
 
 class Search extends Component {
@@ -36,7 +35,6 @@ class Search extends Component {
                 <Header />
                 <Navbar />
                 <div className="searchWrapper">
-                    <TripData onChange={this.handleInputChange} />
                     <TopInterests onChange={this.handleInputChange} />
                     <TopInterests onChange={this.handleInputChange} />
                     <TopInterests onChange={this.handleInputChange} />

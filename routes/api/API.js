@@ -74,6 +74,14 @@ module.exports = function (app) {
     });
     //   console.log("api user test");
   });
+  app.post("/api/posts", function (req, res) {
+    console.log(req.body);
+    db.Post.create(req.body)
+      .then(function (dbPost) {
+        res.json(dbPost)
+      })
+      .catch(err => console.log(err));
+  });
 }
 
 

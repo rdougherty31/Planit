@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
       country: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "US",
         validate: {
           len: [1]
         }
@@ -10,6 +11,7 @@ module.exports = function(sequelize, DataTypes) {
       city: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "New York",
         validate: {
           len: [1]
         }
@@ -17,6 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       startMonth: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "01",
         validate: {
           len: [1]
         }
@@ -24,6 +27,7 @@ module.exports = function(sequelize, DataTypes) {
       startDay: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "01",
         validate: {
           len: [1]
         }
@@ -31,6 +35,7 @@ module.exports = function(sequelize, DataTypes) {
       startYear: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "19",
         validate: {
           len: [1]
         }
@@ -38,6 +43,7 @@ module.exports = function(sequelize, DataTypes) {
       endMonth: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "01",
         validate: {
           len: [1]
         }
@@ -45,6 +51,7 @@ module.exports = function(sequelize, DataTypes) {
       endDay: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "01",
         validate: {
           len: [1]
         }
@@ -52,6 +59,7 @@ module.exports = function(sequelize, DataTypes) {
       endYear: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "19",
         validate: {
           len: [1]
         }
@@ -59,6 +67,7 @@ module.exports = function(sequelize, DataTypes) {
       costMin: {
         type: DataTypes.STRING,
         allowNull: true,
+        defaultValue: "0",
         validate: {
           len: [1]
         }
@@ -66,16 +75,19 @@ module.exports = function(sequelize, DataTypes) {
       costMax: {
         type: DataTypes.STRING,
         allowNull: true,
+        defaultValue: "0",
         validate: {
           len: [1]
         }
       },
       matchedUsers: {
         type: DataTypes.STRING,
+        defaultValue: "",
         allowNull: true
       },
       comments: {
         type: DataTypes.TEXT,
+        defaultValue: "",
         allowNull: true
       },
       planned: {

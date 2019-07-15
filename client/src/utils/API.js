@@ -15,6 +15,9 @@ export default {
   createUser: function(newUser) {
     return axios.post("/api/users", newUser);
   },
+  createPost: function(newPost) {
+    return axios.post("/api/posts", newPost);
+  },
   declinePost: function(id) {
     return axios.post("/api/posts", id);
   }
