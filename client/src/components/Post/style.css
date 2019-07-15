@@ -37,13 +37,22 @@
     padding: 1.5rem;
 }
 .postDest {
-    padding-top: 10rem;
+    padding-top: 8rem;
 }
 .postDates {
     margin-bottom: 5rem;
 }
 #planitBtn {
     margin: 3rem;
+}
+.innerWrapper {
+    overflow: scroll;
+}
+.innerWrapper::-webkit-scrollbar {
+    display: none;
+}
+.listItems {
+    margin-bottom: 8rem;
 }
 .nextTripBtn {
     width: 8rem;

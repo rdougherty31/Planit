@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const Sequelize = require("sequelize");
 const router = express.Router();
+const session = require("express-session");
 const apiRoutes = require("./routes/api/API");
 const cors = require("cors");
 
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// app.use(session({secret:"sadlfkjkasdf", resave: false, saveUninitialized: true}));
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -32,6 +34,8 @@ app.get("/test", (req, res) => {
   res.send("test");
   console.log("test");
 });
+
+
 // Routes
 // =============================================================
 require("./routes/api/API.js")(app);

@@ -32,7 +32,7 @@ class Login extends Component {
         //         console.log("Username: "+this.state.username+" Password: "+this.state.password);
         //     }
         // });
-        API.test().then(response=>response.json(response)).catch(err=>console.log(err));
+        API.getUsers().then(response=>response.json(response)).catch(err=>console.log(err));
         console.log("Login form");
     };
     render() {

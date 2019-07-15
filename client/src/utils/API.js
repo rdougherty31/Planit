@@ -14,6 +14,9 @@ export default {
   },
   createUser: function(newUser) {
     return axios.post("/api/users", newUser);
+  },
+  declinePost: function(id) {
+    return axios.post("/api/posts", id);
   }
   // // Deletes the book with the given id
   // deleteBook: function(id) {
