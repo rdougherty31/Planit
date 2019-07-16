@@ -3,7 +3,7 @@
     width: 70%;
     box-shadow: none;
     text-shadow: none;
-    border: 5px solid #7dc2c2;
+    border: 5px solid #fff;
     background: none;
     color: #fa5d25;
     font-size: 2rem;
@@ -13,10 +13,12 @@
     font-family: inherit;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    text-shadow: 0 0 8px #000;
 }
 #planitBtn div {
     display: inline-block;
 }
 #planitBtn:hover {
-    background: #7dc2c2;
+    background: #fff;
+    text-shadow: none;
 }

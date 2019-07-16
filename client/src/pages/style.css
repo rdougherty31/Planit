@@ -102,3 +102,138 @@ form input, form select {
     margin-top: -25rem;
     padding: 2rem;
 }
+@media only screen and (max-width: 1200px) {
+    .postWrapper, #createTripWrapper {
+      width: 30rem;
+    }
+    .postDest, .postFriends, .postDates {
+      font-size: 1.5rem;
+    }
+    #plan, #it {
+        font-size: 4rem;
+    }
+  }
+@media only screen and (max-width: 900px) {
+    #plan, #it {
+        font-size: 25rem;
+        margin-bottom: .25rem;
+        color: #fa5d259e;
+        text-align: center;
+        overflow: hidden;
+    }
+    .postWrapper, #createTripWrapper {
+        width: 30rem;
+        margin-top: 0;
+      }
+      #header {
+        margin-bottom: -35.4rem;
+        margin-top: 10rem;
+        position: relative;
+        z-index: -10;
+        margin-left: -11rem;
+        margin-right: -11rem;
+        text-align: center;
+        overflow: hidden;
+      }
+      #navbar {
+          width: 100%;
+          text-align: center;
+          padding: .5rem;
+          background-color: rgba(255,255,255,.5);
+      }
+      .generalBtn {
+          display: inline-block;
+          font-size: 1.25rem;
+      }
+      #navbar a {
+          display: inline-block;
+      }
+}
+@media only screen and (max-width: 700px) {
+    #plan, #it {
+        font-size: 12rem;
+        color: #fa5d254f;
+        text-shadow: 0 0 5px rgba(255,255,255,.5);
+    }
+    .postWrapper, #createTripWrapper {
+        margin-top: 3rem;
+    }
+    #header {
+        margin-bottom: -11rem;
+        margin-top: -2rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #navbar {
+        padding: 0;
+    }
+    #navbar a {
+        padding: 3rem 0.35rem;
+    }
+    .generalBtn {
+        font-size: 1.8rem;
+    }
+    #mainContainer {
+        padding-right: 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #plan, #it {
+        font-size: 12rem;
+    }
+    #header {
+        margin-bottom: -9.75rem;
+        margin-top: 0;
+    }
+    #navbar a {
+        padding: 1.75rem 0.35rem;
+    }
+    .generalBtn {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #navbar {
+        margin-bottom: 0;
+    }
+    #navbar a {
+        display: block;
+        border-bottom: 5px dotted rgba(255,255,255,.5);
+        padding: 2rem 0.35rem;
+    }
+    #header {
+        margin-bottom: -27.25rem;
+    }
+    #plan, #it {
+        font-size: 13rem;
+    }
+    .generalBtn {
+        font-size: 2rem;
+    }
+    #mainContainer {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .postDest, .postFriends, .postDates {
+        padding-bottom: 0;  
+    }
+    .innerWrapper, .postWrapper {
+        border-radius: 0;
+    }
+    .postWrapper, #createTripWrapper {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #signinBtn, #signupBtn, #signinUName, #signinPword, #signupName, #signupUName, #signupPword {
+      width: 95%;
+      font-size: 1rem;
+    }
+    #plan, #it {
+        font-size: 10rem;
+    }
+    #header {
+        margin-bottom: -21.25rem;
+    }
+  }
