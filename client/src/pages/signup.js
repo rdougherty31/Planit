@@ -1,6 +1,9 @@
 //sign up page
 import React, { Component } from "react";
-import SignUpBtn from "../components/SignupBtn";
+// import { BrowserRouter } from "react-router-dom";
+import { Redirect } from "react-router";
+import Cookies from "js-cookie";
+import SignUpBtn from "../components/SignupBtn"
 // import TopInterests from "../components/TopInterests";
 // import OtherInterests from "../components/OtherInterests";
 import API from "../utils/API";
@@ -10,9 +13,12 @@ class SignUp extends Component {
     state = {
         name: "",
         username: "",
-        password: ""
+        password: "",
+        redirect: false,
+        cookieUsername: "",
+        cookieID: ""
     };
-    componentDidMount() {
+    componentDidMount = ()  => {
         console.log('yo');
         API.getUsers().then((res) => console.log(res));
         API.getPosts().then((res) => console.log(res));
@@ -22,7 +28,9 @@ class SignUp extends Component {
         const name = event.target.name;
         const value = event.target.value;
         await this.setState({
-            [name]: value
+            [name]: value,
+            cookieUsername: JSON.parse(atob(Cookies.get("session"))).username,
+            cookieID: JSON.parse(atob(Cookies.get("session"))).id
         });
         console.log(this.state);
     }
@@ -47,7 +55,7 @@ class SignUp extends Component {
                         name: this.state.name,
                         username: this.state.username,
                         pword: this.state.password
-                    }).then(response => console.log(this.state.username+" created")).catch(error => console.log(error));
+                    }).then(response => console.log(this.state.username + " created")).catch(error => console.log(error));
                 }
                 uNameExists ? alert("This username already exists. Please choose a different one.") : alert("Welcome, " + this.state.username + "!");
             })
@@ -55,13 +63,17 @@ class SignUp extends Component {
     };
 
     render() {
+        const { redirect } = this.state;
+        if (redirect) {
+            return <Redirect to="/signin" />;
+        }
         return (
             <div>
                 <form id="signupForm">
-                <input id="signupName" type="text" name="name" placeholder="Name" onChange={this.handleInputChange} />
+                    <input id="signupName" type="text" name="name" placeholder="Name" onChange={this.handleInputChange} />
                     <input id="signupUName" type="text" name="username" placeholder="Username" onChange={this.handleInputChange} />
                     <input id="signupPword" type="text" name="password" placeholder="Password" onChange={this.handleInputChange} />
-                    <SignUpBtn onClick={this.handleFormSubmit} />
+                    <SignUpBtn onClick={this.handleFormSubmit}></SignUpBtn>
                 </form>
             </div>
         );

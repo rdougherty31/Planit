@@ -54,7 +54,7 @@ class Post extends Component {
     }
     
     declinePost = (id) => {
-        console.log("decline post fxn");
+        console.log("Decline Trip with ID: "+id);
     };
 
     render() {

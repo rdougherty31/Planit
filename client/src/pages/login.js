@@ -1,5 +1,8 @@
 // login page
 import React, { Component } from "react";
+// import { BrowserRouter } from "react-router-dom";
+import { Redirect } from "react-router";
+import Cookies from "js-cookie";
 import SignInBtn from "../components/SigninBtn";
 import Footer from "../components/Footer";
 // import db from "../../../models/index";
@@ -9,39 +12,84 @@ import API from "../utils/API";
 class Login extends Component {
     state = {
         username: "",
-        pword: ""
+        pword: "",
+        redirect: false,
+        cookieUsername: "",
+        cookieID: ""
     };
-    handleInputChange = event => {
+
+
+    handleInputChange = async event => {
         const name = event.target.name;
         const value = event.target.value;
-        this.setState({
+        await this.setState({
             [name]: value
         });
+        console.log(this.state);
     }
     handleFormSubmit = event => {
         event.preventDefault();
-        // this.searchGiphy(this.state.search);
-        // function checking if username exists already - if does prompts for new entry, if not creates new user
-        // db.Users.findOne({username:this.state.username}).then(name=>{
-        //     if(name === 0) {
-        //         db.User.create({username: this.state.username, password: this.state.password});
-        //         console.log("Username: "+this.state.username+" Password: "+this.state.password);
-        //     } else {
-        //         this.setState({username:"", password:""});
-        //         alert("This username is already taken. Please choose a different one.");
-        //         console.log("Username: "+this.state.username+" Password: "+this.state.password);
-        //     }
-        // });
-        API.getUsers().then(response=>response.json(response)).catch(err=>console.log(err));
+        console.log("handleformsubmit fxn");
+        API.getOneUser(this.state.username)
+        .then(response=>{
+            console.log("Response JSON");
+            console.log(response);
+            // *******************************************
+            // check username bug
+            if (404) {
+                console.log("User does not exist");
+                alert("This username does not exist.");
+                this.setState({
+                    username: "",
+                    pword: "",
+                    redirect: false,
+                    cookieUsername: "",
+                    cookieID: ""
+                });
+                console.log("State after 1st if "+this.state);
+            } else
+            {
+                console.log("User exists");
+                console.log("Response.data.password = "+response.data.pword);
+                if (response.data.pword !== this.state.pword) {
+                    console.log("Incorrect Password");
+                    alert("Invalid username or password");
+                    this.setState({
+                        username: "",
+                        pword: "",
+                        redirect: false,
+                        cookieUsername: "",
+                        cookieID: ""
+                    });
+                    console.log("State after 2nd if "+this.state);
+                } else {
+                    console.log("Login Success");
+                    this.setState({
+                        redirect: true,
+                        cookieUsername: JSON.parse(atob(Cookies.get("session"))).username,
+                        cookieID: JSON.parse(atob(Cookies.get("session"))).id
+                    });
+                }
+            }
+            console.log("response JSON end");
+        })
+        .catch(err=>{
+            // console.log(err);
+            alert("Invalid login.");
+        });
         console.log("Login form");
     };
     render() {
+        const { redirect } = this.state;
+        if (redirect) {
+            return <Redirect to="/feed" />;
+        }
         return (
             <div>
                 <form id="signinForm">
-                    <input id="signinUName" name="username" placeholder="Username" />
-                    <input id="signinPword" name="password" placeholder="Password" />
-                    <SignInBtn onClick={this.handleFormSubmit}/>
+                    <input id="signinUName" name="username" placeholder="Username" onChange={this.handleInputChange} />
+                    <input id="signinPword" name="pword" placeholder="Password" onChange={this.handleInputChange} />
+                    <SignInBtn onClick={this.handleFormSubmit}></SignInBtn>
                 </form>
                 <Footer />
             </div>

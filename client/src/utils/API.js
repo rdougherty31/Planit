@@ -9,6 +9,9 @@ export default {
   getUsers: function() {
     return axios.get("/api/users");
   },
+  getOneUser: function(username) {
+    return axios.get("api/user/"+username);
+  },
   getPosts: function() {
     return axios.get("/api/posts");
   },

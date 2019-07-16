@@ -79,3 +79,26 @@ form input, form select {
 #createDest {
     padding-top: 6rem;
 }
+#signInBtnLink {
+    width: 20rem;
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+}
+#signUpBtnLink {
+    width: 20rem;
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+}
+.profileWrapper {
+    background: rgba(255,255,255,.5);
+    width: 40rem;
+    margin: auto;
+    border-radius: .25rem;
+}
+.profileHeader {
+    text-align: center;
+    margin-top: -25rem;
+    padding: 2rem;
+}

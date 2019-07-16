@@ -35,20 +35,47 @@ module.exports = function (app) {
   });
   app.get("/api/users", function (req, res) {
     console.log("api user test");
-    // req.session.user = user;
+    console.log(req.session);
     db.User.findAll({}).then(function (dbUser) {
       res.json(dbUser);
     })
       .catch(err => console.log(err));
   });
+  app.get("/api/user/:username", function(req, res) {
+    console.log("starting username fxn");
+    console.log(req.session);
+    db.User.findOne({where: {username: req.params.username}}).then(function (dbUser) {
+      console.log(dbUser);
+      if (!dbUser) {
+        res.send(404);
+      } else {
+      req.session.username = dbUser.username;
+      req.session.id = dbUser.id;
+      req.session.name = dbUser.name;
+      console.log(req.session);
+      res.json(dbUser);
+      }
+    })
+    .catch(err => console.log(err));
+  }); 
   app.get("/testAPI", function (req, res) {
-    axios.get("https://api.giphy.com/v1/gifs/search?q=kittens&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=20")
-      .then(response => {
-        console.log(response.data.data)
-        res.send(response.data.data)
-      })
-      .catch(err => console.log(err));
-  });
+    // axios.post("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0/3d6afd89-8072-4d13-b3ac-bd39f1132703")
+    // .then(result=>console.log(result)
+    //   )
+    //   .catch(err => console.log(err));
+
+    axios({
+      url: `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/SFO-sky/LHR-sky/2019-09-01/2019-09-05`,
+      method: 'GET',
+      headers: {"X-RapidAPI-Key": "71a28091a0mshdaad41134865206p13df1ejsn100cb7e4ee56"}
+    }).then(response=>{
+      console.log(res)
+      console.log(res.data);
+      response.json(response);
+    }).catch(err=>console.log(err));
+
+    });
+
   // app.post("/api/users/", function (req, res) {
   //   console.log(req);
   //   db.Post.findOne({ id: req.body })

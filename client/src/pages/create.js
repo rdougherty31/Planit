@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Cookies from "js-cookie";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import PlanitBtn from "../components/PlanitBtn";
@@ -13,7 +14,9 @@ class CreateTrip extends Component {
         startYear: "",
         endMonth: "",
         endDay: "",
-        endYear: ""
+        endYear: "",
+        cookieUsername: JSON.parse(atob(Cookies.get("session"))).username,
+        cookieID: JSON.parse(atob(Cookies.get("session"))).id
     };
 
     handleInputChange = event => {
