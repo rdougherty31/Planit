@@ -5,16 +5,16 @@ module.exports = function (sequelize, DataTypes) {
   // {timestamps: false}
   );
 
-  Author.associate = function (models) {
-    Author.hasMany(models.Post, {
-      onDelete: "cascade"
-    });
-    Author.belongsTo(models.postAuthor, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  }
+  // Author.associate = function (models) {
+  //   Author.hasMany(models.Post, {
+  //     onDelete: "cascade"
+  //   });
+  //   Author.belongsTo(models.postAuthor, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // }
   
   return Author;
 };

@@ -36,7 +36,7 @@ class Login extends Component {
             console.log(response);
             // *******************************************
             // check username bug
-            if (404) {
+            if (!response) {
                 console.log("User does not exist");
                 alert("This username does not exist.");
                 this.setState({

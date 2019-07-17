@@ -41,10 +41,13 @@ class CreateTrip extends Component {
             startYear: this.state.startYear,
             endMonth: this.state.endMonth,
             endDay: this.state.endDay,
-            endYear: this.state.endYear
+            endYear: this.state.endYear,
+            creator: JSON.parse(atob(Cookies.get("session"))).username
         })
-        .then(response => console.log("Trip to "+this.state.destCity+", "+this.state.destCountry+" has been created."))
-        .catch(err => console.log(err));
+            .then(response => {
+                console.log("Trip to " + this.state.destCity + ", " + this.state.destCountry + " has been created.")
+                alert("Your trip to "+this.state.destCity+" has been created!");
+            }).catch(err => console.log(err));
     }
 
     render() {

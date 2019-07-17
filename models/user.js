@@ -5,21 +5,21 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [1]
+          len: [1, 30]
         }
       },
       username: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [5]
+          len: [5, 30]
         }
       },
       pword: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [5]
+          len: [5, 30]
         }
       },
       outdoors: {
@@ -73,6 +73,17 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       }
     });
+
+    // User.associate = function (models) {
+    //   User.hasMany(models.Post, {
+    //     onDelete: "cascade"
+    //   });
+    //   // User.belongsTo(models.postTravelers, {
+    //   //   foreignKey: {
+    //   //     allowNull: false
+    //   //   }
+    //   // });
+    // }
   
   //   User.create({ username: "user123", pword: "pword123", outdoors: true, nature: true, histSites: false, food: true, museums: false, fineArts: true, music: true, festivals: false, nightlife: true, locals: true }).then(user => {
   //       console.log("new user created");

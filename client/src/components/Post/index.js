@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import './style.css';
 import JoinBtn from "../JoinBtn";
-import DeleteBtn from "../DeleteBtn";
+// import DeleteBtn from "../DeleteBtn";
 import { TripList, ListItem } from "../TripList";
 import API from "../../utils/API";
 
@@ -53,9 +53,9 @@ class Post extends Component {
         API.getPosts((req, res) => res.json(res)).then(response => response.json(response)).catch(err => console.log(err));
     }
     
-    declinePost = (id) => {
-        console.log("Decline Trip with ID: "+id);
-    };
+    // declinePost = (id) => {
+    //     console.log("Decline Trip with ID: "+id);
+    // };
 
     render() {
         return (
@@ -69,7 +69,7 @@ class Post extends Component {
                                     <div className="postFriends" key="travelers">Travelers: {post.people}</div>
                                     <div className="postDates" key="dates">{post.startMonth}/{post.startDay}/{post.startYear} - {post.endMonth}/{post.endDay}/{post.endYear}</div>
                                     <JoinBtn />
-                                    <DeleteBtn onClick={this.declinePost(post.id)} />
+                                    {/* <DeleteBtn onClick={this.declinePost(post.id)} /> */}
                                 </ListItem>
 
                             ))}

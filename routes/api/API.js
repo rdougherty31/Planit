@@ -4,28 +4,6 @@ const session = require("express-session");
 const user = "";
 module.exports = function (app) {
 
-  // GET routes
-  //   app.get("/profile", function(req, res) {
-  //   if (!req.session.user) {
-  //     return res.status(401).send("Not signed in.");
-  //   }
-  //   return res.status(200).send("Signed in.");
-  // });
-  // app.post("/login", function(req, res) {
-  //   const username = req.body.username;
-  //   const password = req.body.username;
-  //   User.findOne({username: username, pword: password}, function(error, user) {
-  //     if (error) {
-  //       console.log(error);
-  //       return res.status(500).send();
-  //     }
-  //     if (!user) {
-  //       return res.status(404).send();
-  //     }
-  //     req.session.user = user;
-  //     return res.status(200).send();
-  //   });
-  // });
   app.get("/api/posts", function (req, res) {
     console.log("api post test");
     db.Post.findAll({}).then(function (dbPost) {
@@ -44,7 +22,8 @@ module.exports = function (app) {
   app.get("/api/user/:username", function(req, res) {
     console.log("starting username fxn");
     console.log(req.session);
-    db.User.findOne({where: {username: req.params.username}}).then(function (dbUser) {
+    db.User.findOne({where: {username: req.params.username}})
+    .then(function (dbUser) {
       console.log(dbUser);
       if (!dbUser) {
         res.send(404);
@@ -58,23 +37,23 @@ module.exports = function (app) {
     })
     .catch(err => console.log(err));
   }); 
-  app.get("/testAPI", function (req, res) {
-    // axios.post("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0/3d6afd89-8072-4d13-b3ac-bd39f1132703")
-    // .then(result=>console.log(result)
-    //   )
-    //   .catch(err => console.log(err));
 
-    axios({
-      url: `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/SFO-sky/LHR-sky/2019-09-01/2019-09-05`,
-      method: 'GET',
-      headers: {"X-RapidAPI-Key": "71a28091a0mshdaad41134865206p13df1ejsn100cb7e4ee56"}
-    }).then(response=>{
-      console.log(res)
-      console.log(res.data);
-      response.json(response);
-    }).catch(err=>console.log(err));
-
+app.get("/api/associate", function(req, res) {
+    db.User.findAll({
+      include: [db.Post]
+    }).then(function(dbUser) {
+      res.json(dbUser);
     });
+  });
+
+// app.get("/api/trips/:username", function(req, res) {
+//   console.log(req.params.username);
+//   db.Post.findAll({where: {creator: req.params.username}})
+//   .then(function(dbPost) {
+//     res.json(dbPost);
+//   })
+//   .catch(err => console.log(err));
+// });
 
   // app.post("/api/users/", function (req, res) {
   //   console.log(req);

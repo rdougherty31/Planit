@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     // postTraveler.associate = function(models) {
     //   // Associating Author with Posts
     //   // When an Author is deleted, also delete any associated Posts
-    //   postTraveler.hasMany(models.Traveler, {
+    //   postTraveler.hasMany(models.User, {
     //     onDelete: "cascade"
     //   });
     // };

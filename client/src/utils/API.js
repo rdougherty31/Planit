@@ -15,15 +15,18 @@ export default {
   getPosts: function() {
     return axios.get("/api/posts");
   },
+  getUserPosts: function(username) {
+    return axios.get("/api/posts/"+username);
+  },
   createUser: function(newUser) {
     return axios.post("/api/users", newUser);
   },
   createPost: function(newPost) {
     return axios.post("/api/posts", newPost);
-  },
-  declinePost: function(id) {
-    return axios.post("/api/posts", id);
   }
+  // declinePost: function(id) {
+  //   return axios.post("/api/posts", id);
+  // }
   // // Deletes the book with the given id
   // deleteBook: function(id) {
   //   return axios.delete("/api/books/" + id);
