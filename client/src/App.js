@@ -21,7 +21,6 @@ export default function App() {
         <Route exact path="/feed" component={Feed} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/profile" component={Profile} />
-          {/* <Route exact path="/profile/:id" component={} /> */}
         <Route exact path="/mytrips" component={MyTrips} />
         <Route exact path="/createtrip" component={CreateTrip} />
         <Route exact path="/searchtrips" component={Search} />

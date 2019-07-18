@@ -1,10 +1,7 @@
 import axios from "axios";
 
 export default {
-  // test fxn
-  test: function() {
-    return axios.get("https://api.giphy.com/v1/gifs/search?q=kittens&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=20");
-  },
+  //get routes
   getUsers: function() {
     return axios.get("/api/users");
   },
@@ -20,11 +17,11 @@ export default {
   getUserPosts: function(username) {
     return axios.get("/api/posts/"+username);
   },
+  // post routes
   createUser: function(newUser) {
     return axios.post("/api/users", newUser);
   },
   createPost: function(newPost) {
     return axios.post("/api/posts", newPost);
   }
-
 };

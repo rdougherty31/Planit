@@ -5,7 +5,7 @@ import './style.css';
 export default function Footer() {
     return (
         <div id="footer">
-            Footer
+            © Copywright 2019
         </div>
     );
 }

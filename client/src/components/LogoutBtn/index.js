@@ -1,6 +1,5 @@
-//Create Trip button
+//Logout button
 import React from "react";
-import "./style.css";
 
 export default function LogoutBtn(props) {
 

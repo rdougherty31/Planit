@@ -5,13 +5,12 @@
     padding: .5rem;
     border-radius: .5rem;
     text-align: center;
-    margin-top: -22rem;
+    margin-top: -24rem;
     height: 40rem;
     background: url("../../placeholderGlobe.jpg");
     background-size: cover;
     background-position: center;
     padding: 0;
-    /* background: radial-gradient(rgba(255, 255, 255, 0.5), transparent); */
 }
 .innerWrapper {
     background: rgba(0,0,0,.4);
@@ -19,17 +18,6 @@
     width: 100%;
     border-radius: 1.75rem;
 }
-/* .postImg {
-    border: 1px solid black;
-    box-shadow: 0 0 0.5rem grey inset;
-    border-radius: .3rem;
-    width: 80%;
-    margin: auto;
-    height: 30rem;
-    background: url("../../placeholderGlobe.jpg");
-    background-size: cover;
-    background-position: center;
-} */
 .postDest, .postFriends, .postDates {
     font-family: 'Poppins', sans-serif;
     color: #fff;

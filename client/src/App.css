@@ -1,25 +1,8 @@
-.App {
-  text-align: center;
-}
-
+/* PlanIt header and animation */
 #header {
   animation: App-header-spin 2s ease-out;
   animation-iteration-count: 1;
   width:20%;
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-header-spin {
@@ -31,9 +14,7 @@
   }
 }
 
-
-
-/* my style */
+/* general style */
 html {
   background: url('./pinmap.jpg') no-repeat;
   background-size: cover;
@@ -43,8 +24,6 @@ html {
 }
 #mainContainer {
   width: 65rem;
-  /* height: 50rem; */
-  /* background: rgba(255,255,255,.6); */
   margin: 1rem auto;
   border-radius: 2.5rem;
   margin-bottom: 3rem;

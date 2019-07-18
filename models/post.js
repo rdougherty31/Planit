@@ -112,9 +112,6 @@ module.exports = function(sequelize, DataTypes) {
     //   });
     // };
 
-    // Post.create({ country: "US", city: "Philadelphia", startMonth: "11", startDay: "05", startYear: "19", endMonth: "11", endDay: "09", endYear: "19", costMin: 0, costMax: 500, matchedUsers: "match1", comments: "yay", planned: true });
-    // Post.create({ country: "US", city: "Miami", startMonth: "01", startDay: "02", startYear: "20", endMonth: "01", endDay: "14", endYear: "20", costMin: 0, costMax: 300, matchedUsers: "match5", comments: "wooo", planned: false });
-
     return Post;
   };
   

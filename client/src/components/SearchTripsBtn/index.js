@@ -1,3 +1,4 @@
+// Search Trips Button Component
 import React from "react";
 
 export default function SearchTripsBtn() {

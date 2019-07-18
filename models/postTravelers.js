@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     const postTraveler = sequelize.define("postTraveler", {
-      // Giving the Author model a name of type STRING
       post_id: DataTypes.INTEGER,
       username: DataTypes.STRING
     });

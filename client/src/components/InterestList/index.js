@@ -1,5 +1,5 @@
+// interest list component
 import React from "react";
-// import "./style.css";
 
 export function InterestList({ children }) {
   return (

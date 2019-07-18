@@ -3,6 +3,9 @@ import React from "react";
 
 export default function NoMatch() {
     return (
-        <div>Error - This page does not exist.</div>
+        <div id="noMatchWrapper">
+        <div id="noMatch">Uh oh! This page does not exist.</div>
+        <a href="/" id="homeBtn">Home</a>
+        </div>
     );
 }

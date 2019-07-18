@@ -48,6 +48,16 @@ class CreateTrip extends Component {
             .then(response => {
                 console.log("Trip to " + this.state.destCity + ", " + this.state.destCountry + " has been created.")
                 alert("Your trip to "+this.state.destCity+" has been created!");
+                this.setState({
+                    destCity: "",
+                    destCountry: "",
+                    startMonth: "",
+                    startDay: "",
+                    startYear: "",
+                    endMonth: "",
+                    endDay: "",
+                    endYear: ""
+                });
             }).catch(err => console.log(err));
     }
 

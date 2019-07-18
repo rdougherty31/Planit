@@ -1,3 +1,32 @@
+#noMatch {
+    background: rgba(255,255,255,.5);
+    padding: 5rem;
+    text-align: center;
+    font-family: poppins;
+    font-size: 2rem;
+    margin-bottom: -3rem;
+}
+#noMatchWrapper {
+    text-align: center;
+}
+#homeBtn {
+    text-decoration: none;
+    color: #f88a65;
+    border: 3px solid #f88a65;
+    padding: 0.5rem 1.25rem;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+}
+#homeBtn:hover {
+    background: #f88a65;
+    color: white;
+}
+.profileHeader {
+    font-family: poppins;
+}
+#startMonth, #startDay, #startYear, #endMonth, #endDay, #endYear {
+    color: grey;
+}
 #mainContainer {
     width: 100%;
     background:none;
@@ -29,7 +58,7 @@
       text-decoration: none;
   }
 #signinBtn, #signupBtn {
-    background: radial-gradient(#e79377, #ffd4c6);
+    background: radial-gradient(#f1a68c, #ffd4c6);
     color: white;
     font-family: poppins;
     letter-spacing: .15rem;

@@ -1,3 +1,4 @@
+// Signup Button Component
 import React from "react";
 
 export default function SignUpBtn(props) {

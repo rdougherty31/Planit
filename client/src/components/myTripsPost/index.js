@@ -1,6 +1,5 @@
-// post component
+// My Trips Post component
 import React, { Component } from "react";
-// import './style.css';
 import JoinBtn from "../JoinBtn";
 import DeleteBtn from "../DeleteBtn";
 import { TripList, ListItem } from "../TripList";
@@ -13,7 +12,7 @@ class MyTripsPost extends Component {
         country: "US",
         city: "Miami",
         planned: false,
-        people: "Kyle",
+        creator: "Kyle",
         startMonth: "01",
         startDay: "02",
         startYear: "20",
@@ -35,7 +34,7 @@ class MyTripsPost extends Component {
                     country: "",
                     city: "",
                     planned: false,
-                    people: "",
+                    creator: "",
                     startDate: "",
                     endDate: ""
 
@@ -47,6 +46,10 @@ class MyTripsPost extends Component {
     testClick = () => {
         alert("Added to your saved trips!");
     }
+    removePost = event => {
+        event.prevetDefault();
+
+    }
 
     render() {
         return (
@@ -57,7 +60,7 @@ class MyTripsPost extends Component {
                             {this.state.post.map(post => (
                                 <ListItem key={post.id}>
                                     <div className="postDest">{post.city}, {post.country}</div>
-                                    <div className="postFriends" key="travelers">Travelers: {post.people}</div>
+                                    <div className="postFriends" key="travelers">Travelers: {post.creator}</div>
                                     <div className="postDates" key="dates">{post.startMonth}/{post.startDay}/{post.startYear} - {post.endMonth}/{post.endDay}/{post.endYear}</div>
                                     {/* <JoinBtn data-id={post.id} onClick={this.testClick} /> */}
                                     <DeleteBtn />

@@ -1,5 +1,5 @@
+// Trip List and List Item Components for Post Component and My Trips Post Component
 import React from "react";
-import "./style.css";
 
 export function TripList({ children }) {
   return (

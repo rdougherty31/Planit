@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     var postAuthor = sequelize.define("postAuthor", {
-      // Giving the Author model a name of type STRING
       name: DataTypes.STRING
     });
   
