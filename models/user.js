@@ -84,13 +84,6 @@ module.exports = function(sequelize, DataTypes) {
     //   //   }
     //   // });
     // }
-  
-  //   User.create({ username: "user123", pword: "pword123", outdoors: true, nature: true, histSites: false, food: true, museums: false, fineArts: true, music: true, festivals: false, nightlife: true, locals: true }).then(user => {
-  //       console.log("new user created");
-  //   });
-  //   User.create({ username: "user456", pword: "pword456", outdoors: false, nature: true, histSites: true, food: true, museums: false, fineArts: true, music: false, festivals: false, nightlife: false, locals: true }).then(user => {
-  //     console.log("new user created");
-  // });
 
     return User;
   };
