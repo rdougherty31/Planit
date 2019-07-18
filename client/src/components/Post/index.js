@@ -43,19 +43,9 @@ class Post extends Component {
             ).catch(err => console.log(err));
     };
 
-    planTrip() {
-        return (
-            this.setState({ planned: true })
-        );
+    testClick = () => {
+        alert("Added to your saved trips!");
     }
-
-    nextTrip() {
-        API.getPosts((req, res) => res.json(res)).then(response => response.json(response)).catch(err => console.log(err));
-    }
-    
-    // declinePost = (id) => {
-    //     console.log("Decline Trip with ID: "+id);
-    // };
 
     render() {
         return (
@@ -68,7 +58,7 @@ class Post extends Component {
                                     <div className="postDest">{post.city}, {post.country}</div>
                                     <div className="postFriends" key="travelers">Travelers: {post.people}</div>
                                     <div className="postDates" key="dates">{post.startMonth}/{post.startDay}/{post.startYear} - {post.endMonth}/{post.endDay}/{post.endYear}</div>
-                                    <JoinBtn />
+                                    <JoinBtn data-id={post.id} onClick={this.testClick} />
                                     {/* <DeleteBtn onClick={this.declinePost(post.id)} /> */}
                                 </ListItem>
 

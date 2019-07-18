@@ -2,14 +2,14 @@
 import React from "react";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Post from "../components/Post";
+import MyTripsPost from "../components/myTripsPost";
 
 export default function MyTrips() {
     return (
         <div>
             <Header />
             <Navbar />
-            <Post />
+            <MyTripsPost />
         </div>
     );
 }

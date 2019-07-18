@@ -18,7 +18,6 @@ class Login extends Component {
         cookieID: ""
     };
 
-
     handleInputChange = async event => {
         const name = event.target.name;
         const value = event.target.value;
@@ -87,8 +86,8 @@ class Login extends Component {
         return (
             <div>
                 <form id="signinForm">
-                    <input id="signinUName" name="username" placeholder="Username" onChange={this.handleInputChange} />
-                    <input id="signinPword" name="pword" placeholder="Password" onChange={this.handleInputChange} />
+                    <input id="signinUName" type="text" name="username" placeholder="Username" onChange={this.handleInputChange} />
+                    <input id="signinPword" type="password" name="pword" placeholder="Password" onChange={this.handleInputChange} />
                     <SignInBtn onClick={this.handleFormSubmit}></SignInBtn>
                 </form>
                 <Footer />

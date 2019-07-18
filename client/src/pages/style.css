@@ -6,6 +6,7 @@
     margin-bottom: 3rem;
     padding: .5rem;
     padding-left: 0;
+    padding-right: 0;
   }
   #signupName, #signupUName, #signupPword, #signinUName, #signinPword, #signinBtn, #signupBtn {
     display: block;
@@ -75,6 +76,9 @@ form input, form select {
     color: #fa5d25;
     font-family: poppins;
     margin-bottom: .5rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+
 }
 #createDest {
     padding-top: 6rem;
@@ -115,7 +119,7 @@ form input, form select {
   }
 @media only screen and (max-width: 900px) {
     #plan, #it {
-        font-size: 25rem;
+        font-size: 18rem;
         margin-bottom: .25rem;
         color: #fa5d259e;
         text-align: center;
@@ -123,17 +127,18 @@ form input, form select {
     }
     .postWrapper, #createTripWrapper {
         width: 30rem;
-        margin-top: 0;
+        margin-top: 5.5rem;;
       }
       #header {
-        margin-bottom: -35.4rem;
-        margin-top: 10rem;
+        margin-bottom: -10rem;
+        margin-top: -2rem;
         position: relative;
         z-index: -10;
-        margin-left: -11rem;
-        margin-right: -11rem;
+        /* margin-left: -11rem;
+        margin-right: -11rem; */
         text-align: center;
         overflow: hidden;
+        width: 100%;
       }
       #navbar {
           width: 100%;

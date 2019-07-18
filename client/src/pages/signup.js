@@ -117,7 +117,7 @@ class SignUp extends Component {
                 <form id="signupForm">
                     <input id="signupName" type="text" name="name" placeholder="Name" onChange={this.handleInputChange} />
                     <input id="signupUName" type="text" name="username" placeholder="Username" onChange={this.handleInputChange} />
-                    <input id="signupPword" type="text" name="password" placeholder="Password" onChange={this.handleInputChange} />
+                    <input id="signupPword" type="password" name="password" placeholder="Password" onChange={this.handleInputChange} />
                     <SignUpBtn onClick={this.handleFormSubmit}></SignUpBtn>
                 </form>
             </div>

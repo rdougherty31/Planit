@@ -25,14 +25,15 @@ class CreateTrip extends Component {
         this.setState({
             [name]: value
         });
-        console.log(this.state);
     }
 
     handleFormSubmit = (event) => {
         event.preventDefault();
-        console.log("creating trip");
-        console.log(this.state.destCountry)
-        console.log(this.state);
+        let city = this.state.destCity;
+        let country = this.state.destCountry;
+        if (city.length < 1|| country.length < 1) {
+            return alert("You must enter a city and a country.");
+        }
         API.createPost({
             country: this.state.destCountry,
             city: this.state.destCity,
