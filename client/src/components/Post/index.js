@@ -18,6 +18,7 @@ class Post extends Component {
         endMonth: "03",
         endDay: "04",
         endYear: "20"
+        // tripMates: ""
     }
 
     componentDidMount() {
@@ -36,7 +37,7 @@ class Post extends Component {
                     creator: "",
                     startDate: "",
                     endDate: ""
-
+                    // tripMates: ""
                 });
             }
             ).catch(err => console.log(err));
@@ -55,8 +56,9 @@ class Post extends Component {
                             {this.state.post.map(post => (
                                 <ListItem key={post.id}>
                                     <div className="postDest">{post.city}, {post.country}</div>
-                                    <div className="postFriends" key="travelers">Travelers: {post.creator}</div>
+                                    <div className="postFriends" key="travelers">Creator: {post.creator}</div>
                                     <div className="postDates" key="dates">{post.startMonth}/{post.startDay}/{post.startYear} - {post.endMonth}/{post.endDay}/{post.endYear}</div>
+                                    {/* <div className="tripMates" key="tripMates">Other Travelers: {post.tripMates}</div> */}
                                     <JoinBtn data-id={post.id} onClick={this.testClick} />
                                 </ListItem>
 

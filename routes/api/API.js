@@ -27,7 +27,7 @@ module.exports = function (app) {
       }
     })
     .catch(err => console.log(err));
-  }); 
+  });
   app.get("/api/posts/:username", function(req, res) {
     db.Post.findAll({where: {creator: req.params.username}})
     .then(function (dbUser) {
@@ -39,13 +39,13 @@ module.exports = function (app) {
     }).catch(err => console.log(err));
   }); 
 
-app.get("/api/associate", function(req, res) {
-    db.User.findAll({
-      include: [db.Post]
-    }).then(function(dbUser) {
-      res.json(dbUser);
-    }).catch(err=>console.log(err));
-  });
+// app.get("/api/associate", function(req, res) {
+//     db.User.findAll({
+//       include: [db.Post]
+//     }).then(function(dbUser) {
+//       res.json(dbUser);
+//     }).catch(err=>console.log(err));
+//   });
 
   // POST routes
   app.post("/api/users", function (req, res) {
@@ -65,4 +65,10 @@ app.get("/api/associate", function(req, res) {
     res.json(dbPost)
   }).catch(err => console.log(err));
 });
+  // app.get("/api/posts/:tripId", function(req, res) {
+  //   db.Post.update({where: {id: req.body}}, {set: {matchedUsers: req.body}})
+  //   .then(function (dbPost) {
+  //     res.json(dbPost)
+  //   }).catch(err => console.log(err));
+  // });
 }

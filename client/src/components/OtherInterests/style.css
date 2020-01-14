@@ -4,12 +4,9 @@
 #otherInterests {
     width: 30%;
     margin: 1rem auto;
-    background: rgba(255,255,255,.9);
-    padding: 2rem;
     border-radius: .5rem;
     font-family: poppins;
     font-size: 1.25rem;
-    border: 1px solid #eba;
 }
 #otherInterests input {
     margin-left: 8rem;

@@ -73,7 +73,7 @@
 #createTripWrapper {
     margin: auto;
     font-size: 1.5rem;
-    background: url("../../src/placeholderGlobe.jpg");
+    /* background: url("../../src/placeholderGlobe.jpg"); */
     background-size: cover;
     background-position: center;
     margin-top: -25rem;
@@ -81,9 +81,19 @@
     text-align: center;
     border-radius: .5rem;
 }
-#createInnerWrapper {
+/* #createInnerWrapper {
     background: rgba(0,0,0,.4);
     border-radius: .5rem;
+} */
+.searchWrapper {
+    margin-top: -23rem;
+}
+.searchLabel {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fa5d25;
 }
 #destCountry {
     display: block;
@@ -107,7 +117,7 @@ form input, form select {
     margin-bottom: .5rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
-
+    text-shadow: 0 0 0.5rem #fff;
 }
 #createDest {
     padding-top: 6rem;

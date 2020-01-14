@@ -23,5 +23,8 @@ export default {
   },
   createPost: function(newPost) {
     return axios.post("/api/posts", newPost);
+  },
+  joinTrip: function(tripId) {
+    return axios.get("/api/posts/"+tripId);
   }
 };

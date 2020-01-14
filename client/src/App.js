@@ -16,7 +16,7 @@ export default function App() {
   return (
     <Router>
       <Switch>
-      <Route exact path="/" component={Landing} />
+        <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={Login} />
         <Route exact path="/feed" component={Feed} />
         <Route exact path="/signup" component={SignUp} />

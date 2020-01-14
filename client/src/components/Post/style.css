@@ -7,22 +7,23 @@
     text-align: center;
     margin-top: -24rem;
     height: 40rem;
-    background: url("../../placeholderGlobe.jpg");
+    /* background: url("../../placeholderGlobe.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     padding: 0;
 }
 .innerWrapper {
-    background: rgba(0,0,0,.4);
+    /* background: rgba(0,0,0,.4); */
     height: 100%;
     width: 100%;
     border-radius: 1.75rem;
 }
 .postDest, .postFriends, .postDates {
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: #5f5f62;
     font-size: 1.75rem;
     padding: 1.5rem;
+    text-shadow: 0 0 0.15rem #fff;
 }
 .postDest {
     padding-top: 8rem;

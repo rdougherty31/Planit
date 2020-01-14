@@ -84,26 +84,12 @@ module.exports = function(sequelize, DataTypes) {
         validate: {
           len: [1]
         }
-      },
-      matchedUsers: {
-        type: DataTypes.STRING,
-        defaultValue: "",
-        allowNull: true
-      },
-      comments: {
-        type: DataTypes.TEXT,
-        defaultValue: "",
-        allowNull: true
-      },
-      planned: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
-        allowNull: false
       }
+
     });
   
     // Post.associate = function(models) {
-    //   // We're saying that a Post should belong to an Author
+    //   // A Post should belong to an Author
     //   // A Post can't be created without an Author due to the foreign key constraint
     //   Post.belongsTo(models.User, {
     //     foreignKey: {

@@ -1,0 +1,12 @@
+#searchTripsBtn {
+    width: 16%;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    margin-left: 42%;
+    margin-bottom: 10rem;
+    color: #fa5d25;
+}
+#searchTripsBtn:hover {
+    background: #fff;
+    color: #fa5d25;
+}

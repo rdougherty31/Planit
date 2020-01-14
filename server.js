@@ -36,7 +36,7 @@ const db = require("./models");
 
 // Routes
 require("./routes/api/API.js")(app);
-require("./routes/html/HTML.js")(app);
+// require("./routes/html/HTML.js")(app);
 
 // use routes and cors
 app.use("/api",apiRoutes);

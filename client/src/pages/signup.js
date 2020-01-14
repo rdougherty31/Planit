@@ -24,10 +24,8 @@ class SignUp extends Component {
         event.preventDefault();
         API.getUsers()
             .then(response => {
-                let userExists = false;
                 for (var i = 0; i < response.data.length; i++) {
                     if (this.state.username === response.data.length) {
-                        userExists = true;
                         alert("This username already exists.");
                         this.setState({
                             username: "",

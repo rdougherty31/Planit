@@ -16,8 +16,10 @@
 
 /* general style */
 html {
-  background: url('./pinmap.jpg') no-repeat;
+  background: url(./pinmap.jpg) no-repeat;
   background-size: cover;
+  background-color: silver;
+  background-blend-mode: overlay;
 }
 .App {
   height: 100%;

@@ -1,6 +1,5 @@
 // My Trips Post component
 import React, { Component } from "react";
-import JoinBtn from "../JoinBtn";
 import DeleteBtn from "../DeleteBtn";
 import { TripList, ListItem } from "../TripList";
 import Cookies from "js-cookie";
