@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Serve up static assets (usually on heroku)
+// Serve up static assets on heroku
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
@@ -29,7 +29,7 @@ app.use(cookieSession({
 
 // Add routes, both API and view
 app.use("/api/trips/", routes);
-app.use("/test", routes);
+// app.use("/test", routes);
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -51,6 +51,6 @@ if (process.env.NODE_ENV === "test") {
 }
 db.sequelize.sync(syncOptions).then(function() {
     app.listen(PORT, function() {
-    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+    console.log(`🌎  ==> API Server now listening on PORT ${PORT} !`);
     });
 });
